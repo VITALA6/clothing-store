@@ -20,7 +20,7 @@ public class ProductController {
     @GetMapping("/product")
     public String product(Model model) {
         Product product = new Product(1L, "Kurtka puchowa", "Kurtki", "Zima", "M",
-                LocalDate.of(2026, 14, 1), 1299.99f, true);
+                LocalDate.of(2026, 10, 1), 1299.99f, true);
         model.addAttribute("product", product);
         return "product";
     }
@@ -28,12 +28,12 @@ public class ProductController {
     @GetMapping("/products")
     public String products(Model model) {
         List<Product> products = new ArrayList<>();
-        // products.add(new Product(1L, "Kurtka puchowa", "Kurtki", "Zima", "M",
-        //         LocalDate.of(2026, 14, 1), 1299.99f, true));
-        // products.add(new Product(2L, "T-shirt", "Koszulki", "Lato", "L",
-        //         LocalDate.of(2026, 5, 12), 59.9f, true));
-        // products.add(new Product(3L, "Sweter", "Swetry", "Jesień", "S",
-        //         LocalDate.of(2026, 9, 3), 249.0f, false));
+        products.add(new Product(1L, "Kurtka puchowa", "Kurtki", "Zima", "M",
+                LocalDate.of(2026, 10, 1), 1299.99f, true));
+        products.add(new Product(2L, "T-shirt", "Koszulki", "Lato", "L",
+                LocalDate.of(2026, 5, 12), 59.9f, true));
+        products.add(new Product(3L, "Sweter", "Swetry", "Jesień", "S",
+                LocalDate.of(2026, 9, 3), 249.0f, false));
         model.addAttribute("products", products);
         return "products";
     }
